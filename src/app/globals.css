@@ -1,0 +1,22 @@
+.row-wraper {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidebar {
+      position: absolute; 
+      z-index: 9999;
+  }
+}
