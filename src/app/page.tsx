@@ -1,21 +1,24 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
 import React from 'react';
-import { useEffect } from "react";
-import Navbar from '@/components/Navbar';
+import { useEffect, useState } from "react";
+import Sidebar from "@/components/Sidebar";
+import Headername from '@/components/Headername';
 
 const HomePage: React.FC = () => {
   // useEffect(() => {
   //   document.title = "About Us ";
   // }, []);
+  const isUserLogin = false;
+  const activeMenu = "overview";
+  const name = "Krisna Prihadiyanto";
+  const email = "krisna@123.com"
   return (
     <>
-    <div>
-      <Navbar name="aaa" />
+    <Sidebar isLogin={isUserLogin} isActiveMenu={activeMenu}/>
+    <div className="page-content-wrapper p-4">
+      <Headername name={name} email={email}/>
     </div>
-    <Box background={"red"}>aaa</Box>
-    <button type="button" className="btn btn-secondary">Secondary</button>
     </>
   );
 };
